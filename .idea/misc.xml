@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/boot-01-simple/pom.xml" />
         <option value="$PROJECT_DIR$/boot-kafka/pom.xml" />
         <option value="$PROJECT_DIR$/boot-es/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-framework/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
