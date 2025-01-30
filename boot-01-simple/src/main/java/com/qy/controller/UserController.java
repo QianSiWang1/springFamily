@@ -32,6 +32,14 @@ public class UserController {
         return userById;
     }
 
+    @GetMapping("/user/users")
+    @Operation(summary = "查询所有")
+    public User getUsers(){
+        User userById = userMapper.getList();
+        System.out.println(userById);
+        return userById;
+    }
+
     @GetMapping("/incr")
     @Operation(summary = "redis自增")
     public String incr(){

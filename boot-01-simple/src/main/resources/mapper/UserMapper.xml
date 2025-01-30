@@ -10,4 +10,8 @@
         from tb_user
         where id = #{id}
     </select>
+    <select id="getList" resultType="com.qy.entity.User">
+        select *
+        from tb_user
+    </select>
 </mapper>

@@ -11,4 +11,6 @@ public interface UserMapper {
      * @return
      */
     User getUserById(@Param("id") Long id);
+
+    User getList();
 }

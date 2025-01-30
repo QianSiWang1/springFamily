@@ -1,0 +1,35 @@
+mybatis:
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  configuration:
+    default-statement-timeout: 25000
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    aggressive-lazy-loading: false
+
+server:
+  port: 18005
+
+spring:
+  application:
+    name: application
+  datasource:
+    dynamic:
+      primary: db1
+      strict: false
+      datasource:
+        db1:
+          url: jdbc:mysql://localhost:3306/mp?characterEncoding=utf-8&useUnicode=true&useSSL=false&serverTimezone=UTC
+          username: root
+          password: 123456
+          initial-size: 1
+          min-idle: 1
+          max-active: 20
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        db2:
+          url: jdbc:mysql://localhost:3306/mbp?characterEncoding=utf-8&useUnicode=true&useSSL=false&serverTimezone=UTC
+          username: root
+          password: 123456
+          initial-size: 1
+          min-idle: 1
+          max-active: 20
+          driver-class-name: com.mysql.cj.jdbc.Driver
