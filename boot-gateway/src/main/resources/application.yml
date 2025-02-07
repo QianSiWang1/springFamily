@@ -1,0 +1,33 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: my-gateway
+
+  #配置nacos注册中心地址
+  cloud:
+    nacos:
+      discovery:
+        namespace: dev
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+
+    gateway:
+      #设置路由：路由id、路由到微服务的uri、断言
+      routes:
+        - id: user_route   #路由ID，全局唯一
+          uri: lb://nacos-app-service  #lb 整合负载均衡器ribbon,loadbalancer
+          predicates:
+            - Path=/hello/**   # 断言，路径相匹配的进行路由
+      #跨域配置
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
+              - OPTION

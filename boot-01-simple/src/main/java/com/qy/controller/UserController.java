@@ -4,6 +4,7 @@ import com.qy.entity.User;
 import com.qy.mapper.UserMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
 @Tag(name = "用户接口")
+@Slf4j
 public class UserController {
     @Autowired
     UserMapper userMapper;
@@ -37,6 +39,7 @@ public class UserController {
     public User getUsers(){
         User userById = userMapper.getList();
         System.out.println(userById);
+        log.info("查询所有");
         return userById;
     }
 
