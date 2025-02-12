@@ -1,0 +1,11 @@
+
+  #        shared-configs[0]:
+#          data-id: tulingmall-nacos.yml
+#          group: DEFAULT_GROUP
+#          refresh: true
+#        shared-configs[1]:
+#          data-id: tulingmall-db-common.yml
+#          group: DEFAULT_GROUP
+#          refresh: true
+server:
+  port: 18108
