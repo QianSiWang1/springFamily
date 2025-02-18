@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/MQTest")
 public class MQTestController {
 
-    private final String topic = "TestTopic";
+    private final String topic = "test-topic";
     @Autowired
     RocketMQTemplate rocketMQTemplate;
 
