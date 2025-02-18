@@ -1,16 +1,13 @@
-package com.qy.mall.customer;
+package com.qy.bootrocketmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.LinkedList;
-
 @SpringBootApplication
-public class MallCustomerApplication {
+public class BootRocketmqApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MallCustomerApplication.class, args);
-
+        SpringApplication.run(BootRocketmqApplication.class, args);
     }
 
 }
