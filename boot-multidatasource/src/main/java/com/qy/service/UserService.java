@@ -1,8 +1,8 @@
 package com.qy.service;
 
 import com.baomidou.dynamic.datasource.annotation.DS;
-import com.qy.entity.User;
-import com.qy.mapper.UserMapper;
+import com.qy.entity.DataSourceUser;
+import com.qy.mapper.DataSourceUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,15 +11,15 @@ import java.util.List;
 @Service
 public class UserService {
     @Autowired
-    UserMapper userMapper;
+    DataSourceUserMapper userMapper;
 
     @DS("db1")
-    public List<User> getList() {
+    public List<DataSourceUser> getList() {
         return userMapper.getList();
     }
 
     @DS("db2")
-    public List<User> getListFromDb2() {
+    public List<DataSourceUser> getListFromDb2() {
         return userMapper.getList();
     }
 }

@@ -1,7 +1,6 @@
 package com.qy.controller;
 
-import com.qy.entity.User;
-import com.qy.mapper.UserMapper;
+import com.qy.entity.DataSourceUser;
 import com.qy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,12 +14,12 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/user/list")
-    public List<User> getUsers(){
+    public List<DataSourceUser> getUsers(){
         return userService.getList();
     }
 
     @GetMapping("/user/list2")
-    public List<User> getUsers2(){
+    public List<DataSourceUser> getUsers2(){
         return userService.getListFromDb2();
     }
 }

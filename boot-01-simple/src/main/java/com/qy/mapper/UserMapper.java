@@ -13,4 +13,6 @@ public interface UserMapper {
     User getUserById(@Param("id") Long id);
 
     User getList();
+
+    void updateUserNameById(@Param("id") Long id,@Param("name") String name);
 }

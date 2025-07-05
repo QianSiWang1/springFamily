@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     UserMapper userMapper;
+
     @Autowired
     StringRedisTemplate redisTemplate;
 

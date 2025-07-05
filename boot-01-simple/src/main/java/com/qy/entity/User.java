@@ -1,5 +1,7 @@
 package com.qy.entity;
+
 import lombok.Data;
+
 @Data
 public class User {
     private Long id;
