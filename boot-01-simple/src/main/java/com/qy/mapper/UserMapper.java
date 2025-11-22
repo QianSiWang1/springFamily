@@ -3,6 +3,8 @@ package com.qy.mapper;
 import com.qy.entity.User;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface UserMapper {
     /**
      * 1、每个方法都在Mapper文件中有一个sql标签对应。
@@ -15,4 +17,6 @@ public interface UserMapper {
     User getList();
 
     void updateUserNameById(@Param("id") Long id,@Param("name") String name);
+
+    List<Object> getUserList();
 }

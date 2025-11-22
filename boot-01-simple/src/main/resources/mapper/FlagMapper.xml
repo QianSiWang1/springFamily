@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qy.mapper.FlagMapper">
+
+    <insert id="insertFlag">
+        insert into t_flag(flag_one,flag_two,flag_three)
+        values
+            (#{flagOne,jdbcType=INTEGER},
+             #{flagTwo,jdbcType=TINYINT},
+             #{flagThree,jdbcType=BOOLEAN})
+    </insert>
+</mapper>

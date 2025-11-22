@@ -19,4 +19,18 @@
         select *
         from tb_user
     </select>
+    <resultMap id="recordCount" type="java.lang.Integer">
+        <result column="total" jdbcType="INTEGER"></result>
+    </resultMap>
+    <resultMap id="userVoList" type="com.qy.vo.UserListVo">
+        <result column="id" property="id"></result>
+        <result column="login_name" property="loginName"></result>
+    </resultMap>
+    <select id="getUserList" resultMap="userVoList,recordCount">
+        select
+        *
+        from tb_user
+        LIMIT 0,10;
+        select count(*) as total from tb_user;
+    </select>
 </mapper>

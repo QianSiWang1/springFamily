@@ -10,6 +10,7 @@ public class CustomEventListener {
 
     @EventListener
     public void OrderEventListener(OrderEvent orderEvent){
+        log.info("监听到了订单事件");
         System.out.println(orderEvent.getId());
         System.out.println(orderEvent.getNum());
     }
