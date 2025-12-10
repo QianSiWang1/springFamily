@@ -4,6 +4,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.LifecycleProcessor;
@@ -18,7 +19,8 @@ import javax.annotation.PreDestroy;
  * @Date 2025/12/9
  */
 @Component
-public class _01_BeanLife implements InitializingBean, DisposableBean, LifecycleProcessor, ApplicationContextAware, BeanNameAware {
+public class _01_BeanLife implements InitializingBean, DisposableBean, LifecycleProcessor, ApplicationContextAware,
+        BeanNameAware{
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(_00_AppConfig.class);
