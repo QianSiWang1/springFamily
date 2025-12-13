@@ -1,6 +1,5 @@
 package com.qy._01_ioc._09_inject;
 
-import com.qy._01_ioc._00_AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -11,6 +10,7 @@ public class _01_Start {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(_00_InjectComponentConfig.class);
-        applicationContext.close();
+        Object mapInject = applicationContext.getBean("_08_MapInject");
+        System.out.println("_01_Start ===> _08_MapInject mapInject : " + mapInject);
     }
 }

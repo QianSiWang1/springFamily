@@ -8,4 +8,6 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @ComponentScan("com.qy._01_ioc._09_inject")
 public class _00_InjectComponentConfig {
+
+
 }

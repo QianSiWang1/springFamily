@@ -1,4 +1,4 @@
-package com.qy._01_ioc._09_inject;
+package com.qy._01_ioc._09_inject._01_qualifier;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
