@@ -1,11 +1,12 @@
 package com.qy.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.qy.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
     /**
      * 1、每个方法都在Mapper文件中有一个sql标签对应。
      * 2、所有参数都应该用@Param进行签名，以后使用指定的名字在SQL中取值
