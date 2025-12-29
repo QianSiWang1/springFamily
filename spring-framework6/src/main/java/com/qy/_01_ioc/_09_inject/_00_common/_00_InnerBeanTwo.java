@@ -1,4 +1,4 @@
-package com.qy._01_ioc._09_inject;
+package com.qy._01_ioc._09_inject._00_common;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.qy._01_ioc;
+package com.qy._01_ioc._00_common;
 
 import com.qy.model.User;
 import org.springframework.context.ApplicationContext;

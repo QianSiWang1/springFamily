@@ -1,7 +1,6 @@
-package com.qy._01_ioc._09_inject;
+package com.qy._01_ioc._09_inject._00_common;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class _02_ConstructorInject implements InitializingBean {
     private final _00_InnerBean innerBean;
 
-    @Autowired
+
     public _02_ConstructorInject(_00_InnerBean innerBean) {
         this.innerBean = innerBean;
     }

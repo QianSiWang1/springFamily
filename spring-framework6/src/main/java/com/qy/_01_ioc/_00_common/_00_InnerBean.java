@@ -1,4 +1,4 @@
-package com.qy._01_ioc;
+package com.qy._01_ioc._00_common;
 
 import org.springframework.stereotype.Component;
 

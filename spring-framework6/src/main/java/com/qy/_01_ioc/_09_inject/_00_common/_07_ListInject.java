@@ -1,10 +1,9 @@
-package com.qy._01_ioc._09_inject;
+package com.qy._01_ioc._09_inject._00_common;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
 import java.util.Set;
 
 /**

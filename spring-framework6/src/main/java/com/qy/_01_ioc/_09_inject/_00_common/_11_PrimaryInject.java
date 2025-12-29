@@ -1,23 +1,20 @@
-package com.qy._01_ioc._09_inject;
+package com.qy._01_ioc._09_inject._00_common;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-
 /**
  * @Author qy
- * @Date 2025/12/11
+ * @Date 2025/12/13
  */
 @Component
-public class _06_ArrayInject implements InitializingBean {
+public class _11_PrimaryInject implements InitializingBean {
     @Autowired
-    _00_InnerBean[] innerBeans;
-
+    private _00_InnerBean innerBean;
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("_06_ArrayInject ===> _00_InnerBean innerBean : " + Arrays.toString(innerBeans));
+        System.out.println("_11_PrimaryInject ===> _00_InnerBean innerBean : " + innerBean.getName());
     }
 }
