@@ -11,7 +11,12 @@
     -->
 
     <select id="getUserById" resultType="com.qy.entity.User">
-        select *
+        select
+            id as id,
+            login_name as loginName,
+            nick_name as nickName,
+            password as password,
+            create_time as createTime
         from tb_user
         where id = #{id}
     </select>
